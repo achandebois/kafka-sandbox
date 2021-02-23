@@ -1,8 +1,11 @@
-kafka:
-  boot:
-    server: localhost:9092
-  topic:
-    name: test
-  consumer:
-    group:
-      id: test
+spring:
+  main:
+    banner-mode: off
+  kafka:
+    bootstrap-servers: localhost:9092,localhost:19092,localhost:29092
+    consumer:
+      group-id: happn-default-group-id
+
+logging:
+  level:
+    root: info
